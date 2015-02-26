@@ -16,4 +16,9 @@ suite('temperature', function() {
         calculate();
         assert.match(converted.innerHTML, /ERROR/);
     });
+    test('65.8C = 150.4 Farenheit', function() {
+        original.value = "65.8C";
+        calculate();
+        assert.deepEqual(converted.innerHTML, "150.4 Farenheit");
+    });
 });
